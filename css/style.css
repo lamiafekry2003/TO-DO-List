@@ -1,0 +1,71 @@
+html{
+    scroll-behavior: smooth;
+}
+.tasks .task {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #758694;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #FFF8F3;
+  }
+  .tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .tasks .task:hover {
+    background-color: #f7f7f7;
+  }
+  .tasks .task.done {
+    opacity: 0.7;
+  }
+  .tasks .task span {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .tasks .task span i{
+    padding: 2px 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .tasks .task span .fa-trash{
+    color: red;
+  }
+  .tasks .task span .fa-edit{
+    color: #4caf50;
+  }
+  /*  */
+  .alert-container {
+    position: fixed;
+    top: 20px;
+    right: 50px; 
+    z-index: 1000;
+    transition: right 0.5s ease; 
+  }
+  
+  .alert {
+    background-color: #4caf50; 
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(20px);
+  }
+  
+  .alert.error {
+    background-color: #f44336; /* Red for error */
+  }
+  
+  .alert.show {
+    right: 20px; /* Move it on-screen */
+  }
+  
